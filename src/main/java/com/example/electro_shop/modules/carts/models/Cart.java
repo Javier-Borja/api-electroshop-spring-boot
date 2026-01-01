@@ -1,6 +1,6 @@
 package com.example.electro_shop.modules.carts.models;
 
-import com.example.electro_shop.modules.auth.models.User;
+import com.example.electro_shop.modules.user.model.User;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;

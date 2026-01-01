@@ -1,6 +1,6 @@
 package com.example.electro_shop.modules.carts.repositories;
 
-import com.example.electro_shop.modules.auth.models.User;
+import com.example.electro_shop.modules.user.model.User;
 import com.example.electro_shop.modules.carts.models.Cart;
 import org.springframework.data.jpa.repository.JpaRepository;
 

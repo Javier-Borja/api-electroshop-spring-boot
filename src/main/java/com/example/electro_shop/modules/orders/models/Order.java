@@ -1,6 +1,6 @@
 package com.example.electro_shop.modules.orders.models;
 
-import com.example.electro_shop.modules.auth.models.User;
+import com.example.electro_shop.modules.user.model.User;
 import com.example.electro_shop.modules.orders.enums.OrderStatus;
 import jakarta.persistence.*;
 

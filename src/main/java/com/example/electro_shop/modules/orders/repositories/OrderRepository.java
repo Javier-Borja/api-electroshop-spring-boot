@@ -1,6 +1,6 @@
 package com.example.electro_shop.modules.orders.repositories;
 
-import com.example.electro_shop.modules.auth.models.User;
+import com.example.electro_shop.modules.user.model.User;
 import com.example.electro_shop.modules.orders.models.Order;
 import org.springframework.data.jpa.repository.JpaRepository;
 

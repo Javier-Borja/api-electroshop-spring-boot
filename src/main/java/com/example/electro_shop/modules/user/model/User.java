@@ -1,6 +1,6 @@
-package com.example.electro_shop.modules.auth.models;
+package com.example.electro_shop.modules.user.model;
 
-import com.example.electro_shop.modules.auth.enums.Role;
+import com.example.electro_shop.modules.user.enums.Role;
 import jakarta.persistence.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

@@ -1,6 +1,6 @@
 package com.example.electro_shop.modules.orders.services;
 
-import com.example.electro_shop.modules.auth.models.User;
+import com.example.electro_shop.modules.user.model.User;
 import com.example.electro_shop.modules.carts.models.Cart;
 import com.example.electro_shop.modules.carts.services.CartService;
 import com.example.electro_shop.modules.orders.dtos.CheckoutRequest;

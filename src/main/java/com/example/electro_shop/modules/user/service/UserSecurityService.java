@@ -1,6 +1,6 @@
-package com.example.electro_shop.modules.auth.services;
+package com.example.electro_shop.modules.user.service;
 
-import com.example.electro_shop.modules.auth.repositories.UserRepository;
+import com.example.electro_shop.modules.user.repository.UserRepository;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

@@ -1,6 +1,6 @@
 package com.example.electro_shop.modules.carts.controllers;
 
-import com.example.electro_shop.modules.auth.models.User;
+import com.example.electro_shop.modules.user.model.User;
 import com.example.electro_shop.modules.carts.dtos.CartItemRequest;
 import com.example.electro_shop.modules.carts.dtos.CartResponse;
 import com.example.electro_shop.modules.carts.mappers.CartMapper;

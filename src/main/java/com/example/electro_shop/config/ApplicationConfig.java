@@ -1,6 +1,6 @@
 package com.example.electro_shop.config;
 
-import com.example.electro_shop.modules.auth.services.UserSecurityService;
+import com.example.electro_shop.modules.user.service.UserSecurityService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
