@@ -49,12 +49,19 @@ public class CartService {
     @Transactional
     public Cart syncCart(User user, List<CartItemRequest> itemsFromFront) {
         Cart cart = getOrCreateCart(user);
-
+        cart.getItems().clear();
+        cartRepository.saveAndFlush(cart);
+        
         for (CartItemRequest itemDto : itemsFromFront) {
             productRepository.findByProductId(itemDto.getProductId()).ifPresent(product -> {
-                updateOrCreateItem(cart, product, itemDto.getQuantity());
+                CartItem newItem = new CartItem();
+                newItem.setCart(cart);
+                newItem.setProduct(product);
+                newItem.setQuantity(itemDto.getQuantity());
+                cart.getItems().add(newItem);
             });
         }
+
         return cartRepository.save(cart);
     }
 
