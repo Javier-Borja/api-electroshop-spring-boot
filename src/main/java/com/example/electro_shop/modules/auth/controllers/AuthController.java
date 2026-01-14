@@ -5,14 +5,13 @@ import com.example.electro_shop.modules.auth.dtos.LoginResponse;
 import com.example.electro_shop.modules.auth.dtos.RegisterRequest;
 import com.example.electro_shop.modules.auth.dtos.RegisterResponse;
 import com.example.electro_shop.modules.auth.services.AuthService;
+import com.example.electro_shop.modules.user.model.User;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/auth")
@@ -35,5 +34,10 @@ public class AuthController {
     @PostMapping("/login")
     public ResponseEntity<LoginResponse> loginUser(@Valid @RequestBody LoginRequest request) {
         return ResponseEntity.ok(authService.userLogin(request));
+    }
+
+    @GetMapping("/check-status")
+    public ResponseEntity<LoginResponse> checkStatus(@AuthenticationPrincipal User user) {
+        return ResponseEntity.ok(authService.checkStatus(user));
     }
 }

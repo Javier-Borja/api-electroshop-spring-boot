@@ -67,4 +67,14 @@ public class AuthService {
 
         return response;
     }
+
+    public LoginResponse checkStatus(User user) {
+        String newToken = jwtService.generateToken(user);
+        LoginResponse response = authMapper.toLoginResponse(user);
+        response.setToken(newToken);
+
+        return response;
+    }
+
+
 }

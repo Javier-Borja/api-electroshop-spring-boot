@@ -34,7 +34,7 @@ public class CartController {
     @PostMapping("/add")
     public ResponseEntity<CartResponse> addItem(
             @AuthenticationPrincipal User user,
-            @Valid @RequestBody CartItemRequest request) { // Recibe el mismo DTO que el sync
+            @Valid @RequestBody CartItemRequest request) {
         Cart cart = cartService.addItemToCart(user, request.getProductId(), request.getQuantity());
         return ResponseEntity.ok(cartMapper.toResponseDto(cart));
     }

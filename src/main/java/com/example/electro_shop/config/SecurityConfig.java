@@ -35,10 +35,12 @@ public class SecurityConfig {
                         // Rutas públicas
                         .requestMatchers( "/actuator/health").permitAll()
                         .requestMatchers(HttpMethod.GET, "/api/products/**").permitAll()
-                        .requestMatchers("/api/auth/**").permitAll()
+                        .requestMatchers("/api/auth/login").permitAll()
+                        .requestMatchers("/api/auth/register").permitAll()
                         .requestMatchers("/api/orders/webhook").permitAll()
 
                         // Rutas protegidas (Requieren Token)
+                        .requestMatchers(HttpMethod.GET,"/api/auth/check-status").authenticated()
                         .requestMatchers("/api/orders/checkout").authenticated()
                         .requestMatchers(HttpMethod.GET, "/api/orders/**").authenticated()
                         .requestMatchers("/api/cart/**").authenticated()
